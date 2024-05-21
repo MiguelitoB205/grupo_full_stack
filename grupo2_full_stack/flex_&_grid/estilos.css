@@ -3,123 +3,6 @@
     margin: 10px;
     box-sizing: border-box;
 }
-body{
-    display: grid;
-    grid-template-columns: 6fr;
-    gap: 2px 2px;
-    border: 5px solid rgb(61, 8, 8);
-    background-color: #e4e469;
-    font-family: "Mitr", sans-serif;
-    border-radius: 30px;
-    font-size: calc(1e+0.5vw);
-}
-.cabeza{
-    display: flex;
-    flex-wrap: wrap;
-    border: 5px solid rgb(230, 21, 21);
-    background-color: rgb(233, 233, 159)
-}
-
-.cabeza img{
-    width: 300px;
-    height: 300px;
-    margin-right: 12px;
-}
-
-#servicios{
-    background-color: yellow;
-}
-
-#registro{
-    background-color: rgb(231, 231, 142);
-    padding: 10px;
-    border: 4px solid red;
-    border-radius: 30px;
-}
-img{
-    width: 200px;
-    height: 200px;
-    aspect-ratio: 16/9;
-}
-#contactenos{
-    background-color: #e4e469;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 30px;
-}
-#contactenos  h2{
-    margin: 0 10px;
-}
-
-input{
-    border: 2px solid black;
-    border-radius: 20px;
-    padding: 5px;
-}
-#button{
-    background-color: rgb(214, 214, 65);
-}
-.contenedor{
-    display: grid;
-    grid-template-areas: 'zona1 zona2 zona3';
-}
-.contenedor div{
-    color: white;
-    border-radius: 20px;
-}
-.contenedor p{
-    font-size: 3vh;
-}
-.caja1{
-    grid-area: zona1;
-}
-.caja2{
-    grid-area: zona2;
-}
-.caja3{
-    grid-area: zona3;
-}
-.caja1, .caja2, .caja3{
-    background-color: rgb(228, 228, 212);
-}
-.caja1:hover, .caja2:hover, .caja3:hover{
-    background-color: rgb(223, 233, 93);
-}
-.barra_de_navegacion{
-   
-    padding: 5px;
-    border: 3px solid red;
-    background-color: rgb(150, 150, 54);
-}
-
-
-.barra_de_navegacion a{
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    margin: 10px;
-    text-shadow: 1px 1px red;
-}
-.barra_de_navegacion a:hover{
-    color: red;
-}
-.barra_de_navegacion ul{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-}
-.principal{
-    border: 3px solid red;
-}
-.barraLateral{
-    border: 3px solid red;
-}
-.pieDePagina{
-    border: 3px solid red;
-}
-
 
 
 @media only  screen and (max-width:600px){
@@ -127,23 +10,45 @@ input{
         background-color: rgb(115, 231, 206);
         font-size:calc(1em+2vw);
         font-family: Arial, Helvetica, sans-serif;
+        border: 5px solid rgb(7, 7, 34);
     }
     img{
         display: none;
     }
+    .cabeza{
+        background-color: aquamarine;
+        border-radius: 20px;
+    }
+    .barra_de_navegacion{
+   
+        padding: 5px;
+        border: 3px solid rgb(12, 8, 27);
+        background-color: rgb(123, 149, 184);
+        border-radius: 20px;
+        
+    }
+    
     .barra_de_navegacion ul{
         list-style: none;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        background-color: rgb(205, 221, 221);
+        border-radius: 20px;;
     }
     .contenedor{
         grid-template-areas: "zona1" "zona2" "zona3";
+
         
     } 
     #contactenos{
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .principal{
+        border: 3px solid red;
+        display: flex;
         flex-wrap: wrap;
     }
 }
@@ -166,6 +71,109 @@ input{
     .contenedor{
         grid-area: "zona1 zona2" "zona3 zona3";
     }
+    .principal{
+        border: 3px solid red;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #servicios{
+        background-color: rgb(218, 218, 159);
+    }
+    
+    #registro{
+        background-color: rgb(231, 231, 142);
+        padding: 10px;
+        border: 4px solid rgb(20, 14, 75);
+        border-radius: 30px;
+    }
+    img{
+        width: 200px;
+        height: 200px;
+        aspect-ratio: 16/9;
+    }
+    #contactenos{
+        background-color: #e4e469;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 30px;
+    }
+    #contactenos  h2{
+        margin: 0 10px;
+    }
+    
+    input{
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 5px;
+    }
+    #button{
+        background-color: rgb(214, 214, 65);
+    }
+    .contenedor{
+        display: grid;
+        grid-template-areas: 'zona1' 'zona2 zona3';
+        gap: 10px;
+    }
+    .contenedor div{
+        color: white;
+        border-radius: 20px;
+    }
+    .contenedor p{
+        font-size: 3vh;
+    }
+    .caja1{
+        grid-area: zona1;
+    }
+    .caja2{
+        grid-area: zona2;
+    }
+    .caja3{
+        grid-area: zona3;
+    }
+    .caja1, .caja2, .caja3{
+        background-color: rgb(223, 223, 110);
+    }
+    .caja1:hover, .caja2:hover, .caja3:hover{
+        background-color: rgb(223, 233, 93);
+    }
+    .barra_de_navegacion{
+       
+        padding: 5px;
+        border: 3px solid rgb(0, 0, 0);
+        background-color: rgb(226, 230, 21);
+    }
+    
+    
+    .barra_de_navegacion a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        margin: 10px;
+        text-shadow: 1px 1px rgb(7, 2, 22);
+    }
+    .barra_de_navegacion a:hover{
+        color: red;
+    }
+    .barra_de_navegacion ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }
+    .principal{
+        border: 3px solid red;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .barraLateral{
+        border: 3px solid red;
+    }
+    .pieDePagina{
+        border: 3px solid rgb(7, 6, 24);
+    }
+    
 
 }
 @media only screen and (min-width:802px){
@@ -177,6 +185,183 @@ input{
         grid-template-areas: "zona1 zona2 zona3";
     
     }   
+    .principal{
+        border: 3px solid rgb(8, 3, 27);
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
+@media only screen and (orientation: landscape) {
+    body{
+        display: grid;
+        grid-template-columns: 6fr;
+        gap: 2px 2px;
+        border: 5px solid rgb(221, 226, 235);
+        background-color: #2b2a27;
+        font-family: "Mitr", sans-serif;
+        border-radius: 30px;
+        font-size: calc(1e+0.5vw);
+    }
+    .cabeza{
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid rgb(240, 241, 248);
+    background-image: url('/img/disco.jpg');
+    background-repeat:repeat-x;
+    text-align: center;
+    padding: 20px;
+    transition: color 5s, font-size 2s, padding 1s;
+    border-radius: 20px;
+    color:rgb(250, 249, 253);
+    text-shadow:2px  1px black
+    }
+    .cabeza:hover{
+        padding: 50px;
+       
+    }
+    .cabeza:active{
+        padding: 50px;
+        background-color: #e9da6d;
+        background-image: none;
+    }
+    .cabeza p{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    .barra_de_navegacion{
+        padding: 5px;
+        border: 3px solid rgb(0, 0, 0);
+        background-color: rgb(97, 92, 90);
+        border-radius: 20px;
+        transition: color 2s, font-size 2s, padding 1s;
 
+
+    }
+    .barra_de_navegacion ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .barra_de_navegacion:hover{
+        padding:20px;
+    }
+    
+    
+    .barra_de_navegacion a{
+        text-decoration: none;
+        color: rgb(224, 223, 223);
+        font-size: 20px;
+        margin: 10px;
+        text-shadow: 1px 1px rgb(7, 2, 22);
+    }
+    .barra_de_navegacion a:hover{
+        color: rgb(81, 67, 211);
+    }
+    .barra_de_navegacion ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }
+    .principal{
+        border: 6px solid rgb(236, 9, 9);
+        display: flex;
+        flex-direction: row;
+        text-shadow: 1px 2px rgb(96, 120, 128);
+        border-radius: 30px;
+        
+
+    }
+    .principal p{
+        font-size: 30px;
+        color: rgb(250, 242, 242);
+    }
+    #contactenos{
+        background-color: #272725;
+        display: flex;
+        color: bisque;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 30px;
+        border: 3px solid rgb(235, 227, 227);
+        border-radius: 40px ;
+
+    }
+    
+    #contactenos  h2{
+        margin: 0 10px;
+    }
+    #servicios{
+        background-color: rgb(39, 39, 35);
+        border-radius: 30px;
+        border: 3px dashed rgb(214, 214, 223);
+
+
+    }
+    
+    #registro{
+        background-color: rgb(231, 231, 142);
+        padding: 10px;
+        border: 4px solid rgb(20, 14, 75);
+        border-radius: 30px;
+    }
+    .barraLateral{
+        border: 3px solid rgb(20, 36, 71);
+    }
+    
+    .contenedor{
+        grid-area: "zona1 zona2" "zona3 zona3";
+    }
+    
+   
+    img{
+        width: 200px;
+        height: 200px;
+        aspect-ratio: 16/9;
+    }
+  
+    
+    input{
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 5px;
+    }
+    #button{
+        background-color: rgb(214, 214, 65);
+    }
+    .contenedor{
+        display: grid;
+        grid-template-areas: 'zona1' 'zona2 zona3';
+        gap: 10px;
+    }
+    .contenedor div{
+        color: white;
+        border-radius: 20px;
+    }
+    .contenedor p{
+        font-size: 3vh;
+    }
+    .caja1{
+        grid-area: zona1;
+    }
+    .caja2{
+        grid-area: zona2;
+    }
+    .caja3{
+        grid-area: zona3;
+    }
+    .caja1, .caja2, .caja3{
+        background-color: rgb(223, 223, 110);
+    }
+    .caja1:hover, .caja2:hover, .caja3:hover{
+        background-color: rgb(223, 233, 93);
+    }
+   
+    
+  
+    .pieDePagina{
+        border: 3px solid rgb(7, 6, 24);
+    }
+
+  }
