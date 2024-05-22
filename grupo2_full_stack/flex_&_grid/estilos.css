@@ -4,13 +4,21 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Jersey';
+    src: url('/fuentes/Jersey_25/Jersey25-Regular.ttf');
+}
+
+  
 
 @media only  screen and (max-width:600px){
     body{
         background-color: rgb(115, 231, 206);
         font-size:calc(1em+2vw);
-        font-family: Arial, Helvetica, sans-serif;
         border: 5px solid rgb(7, 7, 34);
+        font-family: "Julee", cursive;
+        font-weight: 400;
+        font-style: normal;
     }
     img{
         display: none;
@@ -193,16 +201,23 @@
 }
 
 @media only screen and (orientation: landscape) {
+    
+  
     body{
+        
         display: grid;
         grid-template-columns: 6fr;
         gap: 2px 2px;
         border: 5px solid rgb(221, 226, 235);
         background-color: #2b2a27;
-        font-family: "Mitr", sans-serif;
         border-radius: 30px;
+        font-family: 'Jersey';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
         font-size: calc(1e+0.5vw);
     }
+  
     .cabeza{
     display: flex;
     flex-wrap: wrap;
@@ -235,7 +250,7 @@
         background-color: rgb(97, 92, 90);
         border-radius: 20px;
         transition: color 2s, font-size 2s, padding 1s;
-
+        transition-delay: 1s;
 
     }
     .barra_de_navegacion ul{
@@ -263,10 +278,14 @@
         display: flex;
         flex-direction: row;
     }
+    main p{
+        font-size: 30px;
+        color: white;
+    }
     .principal{
         border: 6px solid rgb(236, 9, 9);
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-areas:"zona1"  "zona2" "zona2"; 
         text-shadow: 1px 2px rgb(96, 120, 128);
         border-radius: 30px;
         
@@ -276,42 +295,98 @@
         font-size: 30px;
         color: rgb(250, 242, 242);
     }
+   
+    #servicios{
+        background-color: rgb(90, 90, 82);
+        border-radius: 30px;
+        border: 3px solid rgb(214, 214, 223);
+        color: white;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        padding:5px;
+        transition:color 5s, font-size 3s, padding 3s;
+        grid-area: zona1;
+
+
+    }
+    #servicios:hover{
+        padding:15px;
+        background-color: rgb(190, 178, 178);
+        color:black
+    }
     #contactenos{
         background-color: #272725;
         display: flex;
-        color: bisque;
+        color: rgb(252, 249, 246);
         justify-content: flex-start;
         flex-direction: row;
-        flex-wrap: wrap;
-        padding: 30px;
+        padding: 5px;
         border: 3px solid rgb(235, 227, 227);
         border-radius: 40px ;
+        transition: color 5s  padding 2s;
+        transition-delay: 1s;
+        transition-duration: 2s,3s,5s;
+        grid-area: zona2;
 
     }
     
     #contactenos  h2{
         margin: 0 10px;
     }
-    #servicios{
-        background-color: rgb(39, 39, 35);
-        border-radius: 30px;
-        border: 3px dashed rgb(214, 214, 223);
-
+    #contactenos:hover{
+        background-color: rgb(168, 157, 157);
+        color: black;
+        padding:20px;
+    }
+    #contactenos svg{
+        width: 40px;
+        height: 40px;
+    }
+    #registro{
+        background-color: rgb(49, 49, 44);
+        padding: 10px;
+        color: white;
 
     }
-    
-    #registro{
-        background-color: rgb(231, 231, 142);
-        padding: 10px;
-        border: 4px solid rgb(20, 14, 75);
-        border-radius: 30px;
+    @keyframes rotation {
+        0%{
+            transform: rotate(0deg);
+        }
+        50%{
+            transform: rotate(180deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+  
+
+    @keyframes colorfuente{
+        0%{
+            background-color: rgb(75, 69, 69);
+            color: white;
+        }
+        50%{
+            background-color: rgb(128, 123, 123);
+            color: red;
+        }
+        75%{
+            background-color: rgb(155, 147, 147);
+            color: darkred;
+        }
+        100%{
+            background-color:white;
+            color: black;
+        }
     }
     .barraLateral{
-        border: 3px solid rgb(20, 36, 71);
+        border: 3px solid rgb(168, 175, 192);
+        border-radius: 20px;
+        background-color: red;
     }
     
     .contenedor{
-        grid-area: "zona1 zona2" "zona3 zona3";
+        grid-area: "zona1" "zona2" "zona3 zona3";
     }
     
    
@@ -319,7 +394,9 @@
         width: 200px;
         height: 200px;
         aspect-ratio: 16/9;
+        
     }
+
   
     
     input{
@@ -334,10 +411,12 @@
         display: grid;
         grid-template-areas: 'zona1' 'zona2 zona3';
         gap: 10px;
+        border-radius: 2px;
     }
     .contenedor div{
         color: white;
         border-radius: 20px;
+        
     }
     .contenedor p{
         font-size: 3vh;
@@ -352,16 +431,29 @@
         grid-area: zona3;
     }
     .caja1, .caja2, .caja3{
-        background-color: rgb(223, 223, 110);
+        background-color: rgb(95, 95, 89);
+        transition: padding 3s, color 3s;
+        color: rgb(247, 240, 240);
+        padding:10px;
+        transition-duration: 5s,3s,5s,2s;
+        border:4px solid red;
+        transition-delay: 1s;
     }
     .caja1:hover, .caja2:hover, .caja3:hover{
-        background-color: rgb(223, 233, 93);
+        background-color: rgb(155, 147, 147);
+        color: darkred;
+        padding:20px;
+        animation-name: rotation, colorfuente;
+        animation-duration: 2s;
+
+        
     }
    
     
   
     .pieDePagina{
-        border: 3px solid rgb(7, 6, 24);
+        border: 3px solid rgb(150, 150, 158);
+        border-radius: 20px;
     }
 
   }

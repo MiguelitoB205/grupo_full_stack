@@ -5,16 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Práctica Flex</title>
     <link rel="stylesheet" href="estilos.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="path/to/font-awesome/css/font-awesome.min.css"
-    />
   </head>
   <body>
     <header>
@@ -32,75 +22,28 @@
           <li><a href="practica.html">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#contactenos">Contáctenos</a></li>
-          <li><a href="#registro">Registro</a></li>
+          <li><a href="/flex_&_grid/formulario.html">Registro</a></li>
         </ul>
       </div>
     </nav>
     <main>
+      <p>
+        Bienvenidos al mundo de la música, donde puedes escuchar tu música
+        favorita.
+      </p>
       <div class="principal">
-        <p>
-          Bienvenidos al mundo de la música, donde puedes escuchar tu música
-          favorita.
-        </p>
+        
         <section id="servicios">
           <h2>Servicios a:</h2>
           <ul>
             <li>Domicilio</li>
             <li>Reservas de CDs</li>
+            <li>Pruebas de canciones</li>
+        
           </ul>
         </section>
-        <section id="contactenos">
-          <i class="fa fa-phone" aria-hidden="true"></i>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="40px"
-            viewBox="0 -960 960 960"
-            width="50px"
-            fill="#5f6368"
-          >
-            <path
-              d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"
-            />
-          </svg>
-          <h2>Contáctenos: +57 313-355-0351</h2>
-        </section>
-        <section id="registro">
-          <form action="#registro">
-            <label for="nombre">Nombre: </label> <br />
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              placeholder="Escriba su nombre"
-              autofocus
-            /><br />
-            <label for="apellido">Apellido: </label><br />
-            <input
-              type="text"
-              id="apellido"
-              name="apellido"
-              placeholder="Escriba su apellido"
-              autofocus
-            /><br />
-            <label for="correo">Correo: </label><br />
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="Escriba su correo"
-              autofocus
-            /><br />
-            <label for="password">Contraseña: </label> <br />
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Escriba su contraseña"
-              autofocus
-            /><br />
-            <input type="button" id="button" value="Enviar" />
-          </form>
-        </section>
+       
+       
       </div>
     </main>
     <aside>
@@ -113,9 +56,9 @@
             </div>
           </div>
           <div class="caja2">
-            <h2>Nirvana</h2>
+            <h2>Andrés Cepeda</h2>
             <div class="contImagen">
-              <img src="/img/nirvana.webp" alt="" />
+              <img src="/img/cepeda.jpeg" alt="" />
             </div>
           </div>
           <div class="caja3">
@@ -129,7 +72,11 @@
     </aside>
     <footer>
       <div class="pieDePagina">
-        <h2>Pie de página</h2>
+        <section id="contactenos">
+          <h2>Sigános en: </h2>
+          
+          <p>+57 3133550351</p>
+        </section>
       </div>
     </footer>
   </body>
