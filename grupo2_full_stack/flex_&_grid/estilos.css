@@ -317,16 +317,18 @@
         background-color: #272725;
         display: flex;
         color: rgb(252, 249, 246);
-        justify-content: flex-start;
+        justify-content: space-around;
         flex-direction: row;
         padding: 5px;
-        border: 3px solid rgb(235, 227, 227);
-        border-radius: 40px ;
         transition: color 5s  padding 2s;
         transition-delay: 1s;
         transition-duration: 2s,3s,5s;
         grid-area: zona2;
 
+    }
+    .telefono{
+        display: flex;
+        flex-direction: row;
     }
     
     #contactenos  h2{
@@ -337,9 +339,10 @@
         color: black;
         padding:20px;
     }
-    #contactenos svg{
+    #contactenos img{
         width: 40px;
         height: 40px;
+        
     }
     #registro{
         background-color: rgb(49, 49, 44);
