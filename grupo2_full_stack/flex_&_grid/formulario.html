@@ -8,9 +8,18 @@
 
 </head>
 <body>
+  <div class="cabeza">
+    <header>
+      <h1>Bienvenidos a la mejor tienda de música</h1>
+      <p>
+        Les vendemos los mejores discos de la música mundial, desde la música
+        religiosa, hasta la música de rumba.
+      </p>
+    </header>
+  </div>
     <section id="registro">
         <h1>Registro de datos</h1>
-        <form action="#registro">
+        <form id="formulario">
           <label for="nombre">Nombre: </label> <br />
           <input
             type="text"
@@ -170,8 +179,10 @@
           ><br /><br />
           <input type="file" id="seleccion" /> <br /><br /><br />
           
-          <input type="button" id="button" value="Enviar" />
+          <button onclick="mostrarValores()">Enviar datos</button>
+          <div id="valores"></div>
         </form>
       </section>
+      <script src="script.js"></script>
 </body>
 </html>

@@ -19,6 +19,8 @@
         transform: rotate(360deg);
     }
 }
+
+
 @keyframes colorfuente{
     0%{
         background-color: rgb(75, 69, 69);
@@ -275,8 +277,8 @@
             padding: 30px;
            
         }
-        .cabeza h1, .cabeza p:hover{
-            animation: rotation;
+        .cabeza h1:hover{
+            animation: colorfuente;
             animation-duration: 3s;
             
         }
@@ -490,8 +492,8 @@
     }
     
     .cabeza h1, .cabeza p:hover{
-        animation: rotation;
-        animation-duration: 3s;
+        animation: colorfuente;
+        animation-duration: 12s;
         
     }
     .cabeza:active{
