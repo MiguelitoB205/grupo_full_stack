@@ -40,3 +40,12 @@ function mostrarValores(){
 }*/
 
 
+function negro(titulo){
+    titulo.style.color="black"
+    titulo.style.backgroundColor="grey"
+}
+
+function gris(titulo){
+    titulo.style.color="grey"
+    titulo.style.backgroundColor="black"
+}
