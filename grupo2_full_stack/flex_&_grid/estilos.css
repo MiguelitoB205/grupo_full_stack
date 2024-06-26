@@ -596,9 +596,11 @@
         text-shadow: 1px 2px rgb(96, 120, 128);
         border-radius: 30px;
         background-color: rgba(17, 14, 184, 0.507);
-
+padding: 20px;
     }
-
+button {
+    padding: 10px;
+};
     .barra_lateral h1, .barra_lateral p {
         font-size: 30px;
         color: rgb(250, 242, 242);
