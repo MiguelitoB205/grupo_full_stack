@@ -1,0 +1,14 @@
+{
+  "name": "grupo2_full_stack",
+  "version": "1.0.0",
+  "description": "proyecto integrador ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jenny_miguel",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
