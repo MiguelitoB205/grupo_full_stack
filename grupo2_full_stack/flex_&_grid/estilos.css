@@ -9,7 +9,8 @@
     src: url('/fuentes/Jersey_25/Jersey25-Regular.ttf');
 }
 
-@keyframes rotation {
+@keyframes escala {
+
     0% {
         transform: rotate(0deg);
     }
@@ -65,7 +66,7 @@
 
     .cabeza {
         border: 5px solid rgb(240, 241, 248);
-        background-color: rgba(0, 149, 255, 0.56);
+        background-color: rgba(0, 94, 255, 0.56);
         text-align: center;
         padding: 10px;
         transition: color 5s, font-size 2s, padding 1s;
@@ -372,7 +373,7 @@
 
     #servicios:hover {
         padding: 15px;
-        color: black
+        color: rgb(220, 227, 238)
     }
 
     #servicios ul {
@@ -525,7 +526,7 @@
         transition: color 5s, font-size 2s, padding 1s;
         border-radius: 20px;
         color: rgb(250, 249, 253);
-        text-shadow: 2px 1px black;
+        text-shadow: 2px 1px rgb(164, 198, 215);
         grid-column: 1/4;
     }
 
@@ -587,7 +588,7 @@
     }
 
     .barra_de_navegacion a:hover {
-        color: rgb(81, 67, 211);
+        color: rgb(67, 211, 206);
     }
 
 
@@ -595,12 +596,16 @@
         border: 6px solid rgb(240, 234, 234);
         text-shadow: 1px 2px rgb(96, 120, 128);
         border-radius: 30px;
-        background-color: rgba(17, 14, 184, 0.507);
-padding: 20px;
+        background-color: rgba(14, 184, 108, 0.507);
+        padding: 20px;
     }
-button {
-    padding: 10px;
-};
+
+    button {
+        padding: 10px;
+    }
+
+    ;
+
     .barra_lateral h1, .barra_lateral p {
         font-size: 30px;
         color: rgb(250, 242, 242);
