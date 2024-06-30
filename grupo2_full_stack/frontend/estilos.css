@@ -431,9 +431,6 @@
         padding: 5px;
     }
 
-    #button {
-        background-color: rgb(214, 214, 65);
-    }
 
     #contenedor {
         display: flex;
@@ -514,13 +511,13 @@
 
     .cabeza {
         border: 5px solid rgb(240, 241, 248);
-        background-image: url('/img/disco.jpg');
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNWJwZd4QNQhTkLdJueTLFzNDVnsR3E0bYiUkW8qp-BRzHTS2Cz0ojnM_lu5oJ4f4JIgA&usqp=CAU');
         background-repeat: repeat-x;
         text-align: center;
         padding: 10px;
         transition: color 5s, font-size 2s, padding 1s;
         border-radius: 20px;
-        color: rgb(250, 249, 253);
+        color: rgb(30, 113, 168);
         text-shadow: 2px 1px rgb(164, 198, 215);
         grid-column: 1/4;
     }
@@ -593,10 +590,14 @@
         border-radius: 30px;
         background-color: rgba(14, 184, 108, 0.507);
         padding: 20px;
+        font-size: 30px;
     }
 
     button {
-        padding: 10px;
+        padding: 20px;
+        border-radius: 15px;
+        margin:10px;
+        font-size: 25px;
     }
 
     ;
@@ -708,14 +709,15 @@
 
     #caja1:hover, #caja2:hover, #caja3:hover, #caja4:hover, #caja5:hover,
     #caja6:hover, #caja7:hover, #caja8:hover, #caja9:hover, #caja10:hover, #caja11:hover,
-    #caja12:hover, #caja13:hover, #caja14:hover, #caja15:hover {
+    #caja12:hover, #caja13:hover, #caja14:hover, #caja15:hover{
         background-color: rgb(155, 147, 147);
         color: rgb(0, 132, 139);
         padding: 20px;
-        animation-name: rotation, colorfuente;
+        animation-name: escala, colorfuente;
         animation-duration: 2s;
 
     }
+   
 
     .pieDePagina {
         grid-column: 1/4;

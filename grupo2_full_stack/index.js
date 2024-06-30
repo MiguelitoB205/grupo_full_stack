@@ -58,7 +58,20 @@ app.post('/formulario', validacionFormulario, (req,res)=>{
   const ape = req.body.apellido;
   const corr = req.body.email;
   const contr=req.body.password;
+
   cont = cont+1;
+  if(!nom){
+    res.send('Falta el nombre')
+  } else if(!ape){
+    res.send('Faltó el apellido')
+  }  else if(!corr){
+    res.send('Faltó el correo')
+  } else if(!contr){
+    res.send('Faltó la contraseña')
+  }
+  else{
+    next();
+  }
   console.log(`Hola ${nom} ${ape}! tu correo es ${corr} y tu contraseña es ${contr}`);
   const persona1={id:cont, nombre:nom, apellido:ape,correo:corr, contrasena:contr};
   personas.push(persona1);
