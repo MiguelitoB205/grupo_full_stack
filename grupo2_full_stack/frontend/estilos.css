@@ -1,0 +1,744 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@keyframes escala {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes colorfuente {
+    0% {
+        background-color: rgb(75, 69, 69);
+        color: white;
+    }
+
+    50% {
+        background-color: rgb(128, 123, 123);
+        color: rgb(0, 162, 255);
+    }
+
+    75% {
+        background-color: rgb(155, 147, 147);
+        color: rgb(0, 65, 139);
+    }
+
+    100% {
+        background-color: rgb(82, 75, 75);
+        color: black;
+    }
+}
+
+
+@media only screen and (max-width:600px) {
+    body {
+
+        display: flex;
+        flex-direction: column;
+        border: 5px solid rgb(221, 226, 235);
+        background-color: #2b2a27;
+        border-radius: 30px;
+        font-family: 'Jersey';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        font-size: calc(1e+0.5vw);
+
+    }
+
+    .cabeza {
+        border: 5px solid rgb(240, 241, 248);
+        background-color: rgba(0, 94, 255, 0.56);
+        text-align: center;
+        padding: 10px;
+        transition: color 5s, font-size 2s, padding 1s;
+        border-radius: 20px;
+        color: rgb(250, 249, 253);
+        text-shadow: 2px 1px black;
+    }
+
+    .cabeza:hover {
+        padding: 30px;
+
+    }
+
+    .cabeza p {
+        font-size: 10px;
+        font-weight: bolder;
+    }
+
+    .barra_de_navegacion {
+
+        background-color: rgb(97, 92, 90);
+        border-radius: 20px;
+        transition: color 2s, font-size 2s, padding 1s;
+        transition-delay: 1s;
+        padding: 4px;
+    }
+
+    .barra_de_navegacion ul {
+        background-color: grey;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-radius: 15px;
+
+    }
+
+    .barra_de_navegacion li {
+        margin: 4px;
+    }
+
+    .barra_de_navegacion:hover {
+        padding: 8px;
+    }
+
+
+    .barra_de_navegacion a {
+        text-decoration: none;
+        color: rgb(224, 223, 223);
+        font-size: 20px;
+        margin: 10px;
+        text-shadow: 2px 2px rgb(7, 2, 22);
+
+    }
+
+    .barra_de_navegacion a:hover {
+        color: rgb(81, 67, 211);
+    }
+
+    .barra_lateral {
+        border: 6px solid rgba(9, 236, 236, 0.612);
+        text-shadow: 1px 2px rgb(96, 120, 128);
+        border-radius: 30px;
+        background-color: rgba(0, 255, 238, 0.575);
+
+    }
+
+    .barra_lateral p {
+        font-size: 30px;
+        color: rgb(250, 242, 242);
+    }
+
+
+    #servicios {
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        padding: 5px;
+        transition: color 5s, font-size 3s, padding 3s;
+        border-radius: 25px;
+        background-color: #30b4ad91;
+        font-size: 20px;
+    }
+
+    #servicios:hover {
+        padding: 15px;
+        color: black
+    }
+
+    #servicios ul {
+        list-style: none;
+
+    }
+
+    #contactenos {
+        display: flex;
+        color: rgb(252, 249, 246);
+        justify-content: space-around;
+        flex-direction: row;
+        transition: color 5s padding 2s;
+
+        grid-area: zona2;
+
+    }
+
+    .telefono {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #contactenos h2 {
+        margin: 0 10px;
+    }
+
+    #contactenos img {
+        width: 40px;
+        height: 40px;
+
+    }
+
+    #contactenos img:hover {
+        animation: rotation;
+        animation-duration: 2s;
+    }
+
+
+
+
+
+    .principal {
+        border: 3px solid rgb(168, 175, 192);
+        border-radius: 20px;
+        background-color: rgb(0, 255, 247);
+    }
+
+
+    img {
+        width: 150px;
+        height: 150px;
+        aspect-ratio: 16/9;
+    }
+
+    input {
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 5px;
+    }
+
+    #contenedor {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 2px;
+    }
+
+    #contenedor div {
+        color: white;
+        border-radius: 20px;
+
+    }
+
+    #contenedor p {
+        font-size: 3vh;
+    }
+
+    #caja1, #caja2, #caja3 {
+        background-color: rgb(95, 95, 89);
+        transition: padding 3s, color 3s;
+        color: rgb(247, 240, 240);
+        padding: 10px;
+        transition-duration: 5s, 3s, 5s, 2s;
+        border: 4px solid rgb(0, 255, 238);
+        transition-delay: 1s;
+    }
+
+    #caja1:hover, #caja2:hover, #caja3:hover {
+        background-color: rgb(155, 147, 147);
+        color: rgba(3, 128, 174, 0.74);
+        padding: 20px;
+        animation-name: rotation, colorfuente;
+        animation-duration: 2s;
+
+    }
+
+    .pieDePagina {
+        grid-column: 1/4;
+        border: 3px solid white;
+        border-radius: 15px;
+        background-color: rgb(80, 75, 75);
+        transition-delay: 1s;
+        transition-duration: 2s, 3s, 5s;
+        padding: 15px;
+
+    }
+
+    .pieDePagina:hover {
+        background-color: rgb(168, 157, 157);
+        color: black;
+        padding: 25px;
+    }
+
+}
+
+@media only screen and (min-width:601px) {
+    body {
+
+        display: flex;
+        flex-direction: column;
+        border: 5px solid rgb(221, 226, 235);
+        background-color: #2b2a27;
+        border-radius: 30px;
+        font-family: 'Jersey';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        font-size: calc(1e+0.5vw);
+
+    }
+
+    .cabeza {
+        border: 5px solid rgb(240, 241, 248);
+        background-color: rgba(51, 88, 192, 0.548);
+        text-align: center;
+        padding: 10px;
+        transition: color 5s, font-size 2s, padding 1s;
+        border-radius: 20px;
+        color: rgb(250, 249, 253);
+        text-shadow: 2px 1px black;
+
+    }
+
+    .cabeza:hover {
+        padding: 30px;
+
+    }
+
+    .cabeza h1:hover {
+        animation: colorfuente;
+        animation-duration: 3s;
+
+    }
+
+    .barra_de_navegacion {
+
+        background-color: rgb(97, 92, 90);
+        border-radius: 20px;
+        transition: color 2s, font-size 2s, padding 1s;
+        transition-delay: 1s;
+        padding: 4px;
+    }
+
+    .barra_de_navegacion ul {
+        background-color: grey;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-radius: 15px;
+
+    }
+
+    .barra_de_navegacion li {
+        margin: 4px;
+    }
+
+    .barra_de_navegacion:hover {
+        padding: 8px;
+    }
+
+
+    .barra_de_navegacion a {
+        text-decoration: none;
+        color: rgb(224, 223, 223);
+        font-size: 20px;
+        margin: 10px;
+        text-shadow: 2px 2px rgb(7, 2, 22);
+
+    }
+
+    .barra_de_navegacion a:hover {
+        color: rgb(81, 67, 211);
+    }
+
+    .barra_lateral {
+        border: 6px solid rgba(9, 187, 236, 0.6);
+        text-shadow: 1px 2px rgb(96, 120, 128);
+        border-radius: 30px;
+        background-color: rgb(0, 170, 255);
+
+    }
+
+    .barra_lateral p {
+        font-size: 30px;
+        color: rgb(250, 242, 242);
+    }
+
+
+    #servicios {
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        padding: 5px;
+        transition: color 5s, font-size 3s, padding 3s;
+        border-radius: 25px;
+        background-color: #3084b472;
+        font-size: 20px;
+    }
+
+    #servicios:hover {
+        padding: 15px;
+        color: rgb(220, 227, 238)
+    }
+
+    #servicios ul {
+        list-style: none;
+
+    }
+
+    #contactenos {
+        display: flex;
+        color: rgb(252, 249, 246);
+        justify-content: space-around;
+        flex-direction: row;
+        transition: color 5s padding 2s;
+
+        grid-area: zona2;
+
+    }
+
+    .telefono {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #contactenos h2 {
+        margin: 0 10px;
+    }
+
+    #contactenos img {
+        width: 40px;
+        height: 40px;
+
+    }
+
+    #contactenos img:hover {
+        animation: rotation;
+        animation-duration: 2s;
+    }
+
+
+
+
+
+    .principal {
+        border: 3px solid rgb(168, 175, 192);
+        border-radius: 20px;
+        background-color: rgb(0, 255, 213);
+    }
+
+
+    img {
+        width: 100px;
+        height: 100px;
+        aspect-ratio: 16/9;
+
+    }
+
+    input {
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 5px;
+    }
+
+
+    #contenedor {
+        display: flex;
+        gap: 10px;
+        border-radius: 2px;
+    }
+
+    #contenedor div {
+        color: white;
+        border-radius: 20px;
+
+    }
+
+    #contenedor p {
+        font-size: 3vh;
+    }
+
+    #caja1, #caja2, #caja3 {
+        background-color: rgb(95, 95, 89);
+        transition: padding 3s, color 3s;
+        color: rgb(247, 240, 240);
+        padding: 10px;
+        transition-duration: 5s, 3s, 5s, 2s;
+        border: 4px solid rgb(0, 255, 221);
+        transition-delay: 1s;
+    }
+
+    #caja1:hover, #caja2:hover, #caja3:hover {
+        background-color: rgb(155, 147, 147);
+        color: rgb(0, 139, 109);
+        padding: 20px;
+        animation-name: rotation, colorfuente;
+        animation-duration: 2s;
+
+    }
+
+    .pieDePagina {
+        grid-column: 1/4;
+        border: 3px solid white;
+        border-radius: 15px;
+        background-color: rgb(80, 75, 75);
+        transition-delay: 1s;
+        transition-duration: 2s, 3s, 5s;
+        padding: 15px;
+
+    }
+
+    .pieDePagina:hover {
+        background-color: rgb(168, 157, 157);
+        color: black;
+        padding: 25px;
+    }
+
+}
+
+
+@media only screen and (orientation: landscape) {
+
+
+    body {
+
+        display: grid;
+        grid-template-columns: auto auto auto;
+        row-gap: 10px;
+        column-gap: 10px;
+        border: 5px solid rgb(221, 226, 235);
+        background-color: #2b2a27;
+        border-radius: 30px;
+        font-family: 'Jersey';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        font-size: calc(1e+0.5vw);
+
+    }
+
+
+
+    .cabeza {
+        border: 5px solid rgb(240, 241, 248);
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNWJwZd4QNQhTkLdJueTLFzNDVnsR3E0bYiUkW8qp-BRzHTS2Cz0ojnM_lu5oJ4f4JIgA&usqp=CAU');
+        background-repeat: repeat-x;
+        text-align: center;
+        padding: 10px;
+        transition: color 5s, font-size 2s, padding 1s;
+        border-radius: 20px;
+        color: rgb(30, 113, 168);
+        text-shadow: 2px 1px rgb(164, 198, 215);
+        grid-column: 1/4;
+    }
+
+    .cabeza h1, .cabeza p:hover {
+        animation: colorfuente;
+        animation-duration: 12s;
+
+    }
+
+    .cabeza:active {
+        padding: 50px;
+        background-color: #30b470;
+        background-image: none;
+    }
+
+    .cabeza p {
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+
+    .barra_de_navegacion {
+
+        background-color: rgb(97, 92, 90);
+        border-radius: 20px;
+        transition: color 2s, font-size 2s, padding 1s;
+        transition-delay: 1s;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        padding: 2px;
+    }
+
+    .barra_de_navegacion ul {
+        background-color: grey;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border-radius: 15px;
+
+    }
+
+    .barra_de_navegacion li {
+        margin: 40px;
+    }
+
+    .barra_de_navegacion:hover {
+        padding: 10px;
+    }
+
+
+    .barra_de_navegacion a {
+        text-decoration: none;
+        color: rgb(224, 223, 223);
+        font-size: 20px;
+        margin: 10px;
+        text-shadow: 2px 2px rgb(7, 2, 22);
+
+    }
+
+    .barra_de_navegacion a:hover {
+        color: rgb(67, 211, 206);
+    }
+
+
+    .barra_lateral {
+        border: 6px solid rgb(240, 234, 234);
+        text-shadow: 1px 2px rgb(96, 120, 128);
+        border-radius: 30px;
+        background-color: rgba(14, 184, 108, 0.507);
+        padding: 20px;
+        font-size: 30px;
+    }
+
+    button {
+        padding: 20px;
+        border-radius: 15px;
+        margin:10px;
+        font-size: 25px;
+    }
+
+    ;
+
+    .barra_lateral h1, .barra_lateral p {
+        font-size: 30px;
+        color: rgb(250, 242, 242);
+        margin-left: 30px;
+    }
+
+    .barra_lateral iframe {
+        display: block;
+        margin-left: 50px;
+    }
+
+    #contactenos {
+        display: flex;
+        color: rgb(252, 249, 246);
+        justify-content: space-around;
+        flex-direction: row;
+        transition: color 5s padding 2s;
+
+        grid-area: zona2;
+
+    }
+
+    .telefono {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #contactenos h2 {
+        margin: 0 10px;
+    }
+
+    #contactenos img {
+        width: 40px;
+        height: 40px;
+
+    }
+
+    #contactenos img:hover {
+        animation: rotation;
+        animation-duration: 2s;
+    }
+
+    #registro {
+        background-color: rgb(49, 49, 44);
+        padding: 10px;
+        color: white;
+
+    }
+
+
+
+
+    #principal {
+        border: 3px solid rgb(168, 175, 192);
+        border-radius: 20px;
+        background-color: rgba(0, 195, 255, 0.842);
+    }
+
+
+    img {
+        width: 200px;
+        height: 200px;
+        aspect-ratio: 16/9;
+
+    }
+
+    input {
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 5px;
+    }
+
+  
+
+    h1 {
+        margin: 10px;
+    }
+
+    #contenedor {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+
+    }
+
+    #contenedor div {
+        color: white;
+        border-radius: 20px;
+
+    }
+
+    #contenedor p {
+        font-size: 3vh;
+    }
+
+    #caja1, #caja2, #caja3, #caja4, #caja5, #caja6, #caja7, #caja8, #caja9, #caja10, #caja11, #caja12, #caja13, #caja14, #caja15 {
+        background-color: rgb(95, 95, 89);
+        transition: padding 3s, color 3s;
+        color: rgb(247, 240, 240);
+        padding: 10px;
+        transition-duration: 5s, 3s, 5s, 2s;
+        border: 4px solid rgb(0, 251, 255);
+        transition-delay: 1s;
+    }
+
+    #caja1:hover, #caja2:hover, #caja3:hover, #caja4:hover, #caja5:hover,
+    #caja6:hover, #caja7:hover, #caja8:hover, #caja9:hover, #caja10:hover, #caja11:hover,
+    #caja12:hover, #caja13:hover, #caja14:hover, #caja15:hover{
+        background-color: rgb(155, 147, 147);
+        color: rgb(0, 132, 139);
+        padding: 20px;
+        animation-name: escala, colorfuente;
+        animation-duration: 2s;
+
+    }
+   
+
+    .pieDePagina {
+        grid-column: 1/4;
+        border: 3px solid white;
+        border-radius: 15px;
+        background-color: rgb(80, 75, 75);
+        transition-delay: 1s;
+        transition-duration: 2s, 3s, 5s;
+        padding: 15px;
+
+    }
+
+    .pieDePagina:hover {
+        background-color: rgb(168, 157, 157);
+        color: black;
+        padding: 25px;
+    }
+
+    #titulo_video {
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+
+}
