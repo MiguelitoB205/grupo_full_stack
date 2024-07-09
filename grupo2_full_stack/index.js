@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
-const port = 3300
+const port = 3000
 
 
 /***************************** */
@@ -13,14 +13,18 @@ app.get('/', (req, res) => {
 })
 app.use(express.urlencoded({extended: true}))
 
-//app.use(express.json())
+app.use(express.json())
 const validacionFormulario = (req,res,next)=>{
   const nombre = req.body.nombre
+  const apellido = req.body.apellido
   const correo = req.body.email;
   const contrasena=req.body.password;
   if(!nombre){
     res.send('Falta el nombre')
-  } else if(!correo){
+  } else if(!apellido){
+    res.send("Falta el apellido")
+  }
+   else if(!correo){
     res.send('Faltó el correo')
   } else if(!contrasena){
     res.send('Faltó la contraseña')
@@ -70,6 +74,7 @@ connectDB();
 const Schema = mongoose.Schema;
 const userSchema = new Schema({
   nombre: String,
+  apellido: String,
   correo: String,
   contrasena: String
 })
@@ -77,11 +82,15 @@ const userSchema = new Schema({
 const User = mongoose.model('User', userSchema)
 
 //Crear nuevo usuario
-app.post('/crearUsuario',validacionFormulario, async(req,res)=>{
-  const nombre = req.body.nombre
+app.post('/crearUsuario', validacionFormulario, async(req,res)=>{
+  const nomb = req.body.nombre
+  const apell = req.body.apellido
   const correo = req.body.email
   const contrasena = req.body.password
-  const user = new User({nombre: nombre, correo: correo, contrasena: contrasena});
+  const user = new User({nombre: nomb, 
+     apellido: apell,
+     email: correo, 
+     password: contrasena});
   try{
   await user.save()
   res.send('Usuario creado')
