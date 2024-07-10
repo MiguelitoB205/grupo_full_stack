@@ -517,9 +517,10 @@
         padding: 10px;
         transition: color 5s, font-size 2s, padding 1s;
         border-radius: 20px;
-        color: rgb(30, 113, 168);
-        text-shadow: 2px 1px rgb(164, 198, 215);
+        color: rgb(92, 185, 119);
+        text-shadow: 4px 2px rgb(4, 30, 25);
         grid-column: 1/4;
+        font-size: 25px;
     }
 
     .cabeza h1, .cabeza p:hover {
@@ -598,6 +599,8 @@
         border-radius: 15px;
         margin:10px;
         font-size: 25px;
+        background-color: rgba(44, 91, 141, 0.878);
+        color: white
     }
 
     ;
@@ -644,12 +647,7 @@
         animation-duration: 2s;
     }
 
-    #registro {
-        background-color: rgb(49, 49, 44);
-        padding: 10px;
-        color: white;
-
-    }
+  
 
 
 
@@ -713,8 +711,8 @@
         background-color: rgb(155, 147, 147);
         color: rgb(0, 132, 139);
         padding: 20px;
-        animation-name: escala, colorfuente;
-        animation-duration: 2s;
+        animation-name:colorfuente;
+       
 
     }
    
