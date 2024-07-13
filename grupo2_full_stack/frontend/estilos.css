@@ -511,22 +511,18 @@
 
     .cabeza {
         border: 5px solid rgb(240, 241, 248);
-        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNWJwZd4QNQhTkLdJueTLFzNDVnsR3E0bYiUkW8qp-BRzHTS2Cz0ojnM_lu5oJ4f4JIgA&usqp=CAU');
-        background-repeat: repeat-x;
         text-align: center;
         padding: 10px;
         transition: color 5s, font-size 2s, padding 1s;
         border-radius: 20px;
-        color: rgb(92, 185, 119);
+        color: rgba(188, 122, 15, 0.819);
         text-shadow: 4px 2px rgb(4, 30, 25);
         grid-column: 1/4;
         font-size: 25px;
     }
 
-    .cabeza h1, .cabeza p:hover {
-        animation: colorfuente;
-        animation-duration: 12s;
-
+    h1{
+        color: rgba(188, 122, 15, 0.819);;
     }
 
     .cabeza:active {
@@ -677,11 +673,18 @@
     h1 {
         margin: 10px;
     }
-
+    main h1{
+        margin-left:100px;
+    }
+    button a{
+        text-decoration: none;
+        color: white;
+    }
     #contenedor {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto auto;
         gap: 10px;
+        margin-left:100px
 
     }
 
@@ -695,19 +698,20 @@
         font-size: 3vh;
     }
 
-    #caja1, #caja2, #caja3, #caja4, #caja5, #caja6, #caja7, #caja8, #caja9, #caja10, #caja11, #caja12, #caja13, #caja14, #caja15 {
+    #caja1, #caja2, #caja3, #caja4, #caja5, #caja6, #caja7, #caja8, #caja9, #caja10, #caja11, #caja12,
+     #caja13, #caja14, #caja15, #caja16 {
         background-color: rgb(95, 95, 89);
         transition: padding 3s, color 3s;
         color: rgb(247, 240, 240);
         padding: 10px;
         transition-duration: 5s, 3s, 5s, 2s;
-        border: 4px solid rgb(0, 251, 255);
+        border: 4px solid rgb(16, 54, 87);
         transition-delay: 1s;
     }
 
     #caja1:hover, #caja2:hover, #caja3:hover, #caja4:hover, #caja5:hover,
     #caja6:hover, #caja7:hover, #caja8:hover, #caja9:hover, #caja10:hover, #caja11:hover,
-    #caja12:hover, #caja13:hover, #caja14:hover, #caja15:hover{
+    #caja12:hover, #caja13:hover, #caja14:hover, #caja15:hover, #caja16:hover{
         background-color: rgb(155, 147, 147);
         color: rgb(0, 132, 139);
         padding: 20px;
