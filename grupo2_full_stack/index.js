@@ -1,10 +1,13 @@
 const express = require('express')
+const mongoose = require('mongoose')
+const app = express()
+const port = 3300
 
 app.set('view engine', 'html')
 app.get('/', (req, res) => {
   res.send('Hola mundo!')
 })
-app.use(express.urlencoded({extended: true}
+app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 const validacionFormulario = (req,res,next)=>{
   const nombre = req.body.nombre
