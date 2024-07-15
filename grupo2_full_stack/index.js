@@ -130,11 +130,6 @@ app.post('/usuario/nombre', async (req, res)=>{
 })
 
 
-
-
-
-
-
 app.listen(port, () => {
   console.log(`Servidor activo escuchando el puerto http://localhost:${port}`)
 })
