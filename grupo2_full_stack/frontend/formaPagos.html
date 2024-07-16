@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="formulari.css" />
+    <link rel="stylesheet" href="formulario.css" />
     <link rel="stylesheet" href="estilos.css">
     <title>Document</title>
 </head>
@@ -13,9 +13,6 @@
     <div class="cabeza">
         <header>
             <h1>BIENVENIDOS A LA MEJOR TIENDA MUSICAL</h1>
-            <h1>
-                CREAMOS LOS MEJORES ALBUMES DE SU PREFERENCIA
-            </h1>
         </header>
     </div>
     <div class="barra_de_navegacion">
@@ -30,20 +27,25 @@
     </div>
     <h1>Formas de pago</h1>
     <form>
-        <input type="checkbox">
+        <input type="radio" id="contra_entrega" name="forma_pago" value="contraEntrega">
         <label for="contra_entrega">Contra entrega</label><br>
-        <input type="checkbox">
+        <input type="radio" id="tarjeta_credito" name="forma_pago" value="tarjetaCredito">
         <label for="credito">Tarjeta de Crédito</label><br>
-        <input type="checkbox">
+        <input type="radio" id="tarjeta_debito" name="forma_pago" value="tarjetaDebito">
         <label for="debito">Tarjeta de débito</label><br>
-        <input type="checkbox">
+        <input type="radio" id="transfiya" name="forma_pago" value="transfiya">
         <label for="transfiya">Transfiya</label><br>
-        <input type="checkbox">
+        <input type="radio" id="nequi" name="forma_pago" value="nequi">
         <label for="nequi">Nequi</label><br>
-        <input type="checkbox">
-        <label for="daviplata">Daviplata</label>
-    </form>
-    <button>Enviar</button>
+        <input type="radio" id="daviplata" name="forma_pago" value="daviPlata">
+        <label for="daviplata">Daviplata</label><br>
+        <label for="numeroCuenta" >Ingrese su número de cuenta (Para Nequi y Daviplata es el número móvil)</label>
+        <input type="text" id="numeroCuenta" name="numeroCuenta" required>
+    </form> <br>
+    <button>Confirmar pago</button>
+    <h2 id="confirmacionPago" name="confirmacionPago"></h2>
+    <script src="programa.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 
 </html>

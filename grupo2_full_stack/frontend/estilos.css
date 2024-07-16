@@ -121,38 +121,11 @@
         color: rgb(81, 67, 211);
     }
 
-    .barra_lateral {
-        border: 6px solid rgba(9, 236, 236, 0.612);
-        text-shadow: 1px 2px rgb(96, 120, 128);
-        border-radius: 30px;
-        background-color: rgba(0, 255, 238, 0.575);
-
-    }
-
-    .barra_lateral p {
-        font-size: 30px;
-        color: rgb(250, 242, 242);
-    }
+   
 
 
-    #servicios {
-        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-        padding: 5px;
-        transition: color 5s, font-size 3s, padding 3s;
-        border-radius: 25px;
-        background-color: #30b4ad91;
-        font-size: 20px;
-    }
-
-    #servicios:hover {
-        padding: 15px;
-        color: black
-    }
-
-    #servicios ul {
-        list-style: none;
-
-    }
+   
+   
 
     #contactenos {
         display: flex;
@@ -304,15 +277,10 @@
 
     .barra_de_navegacion {
 
-        background-color: rgb(97, 92, 90);
-        border-radius: 20px;
-        transition: color 2s, font-size 2s, padding 1s;
-        transition-delay: 1s;
         padding: 4px;
     }
 
     .barra_de_navegacion ul {
-        background-color: grey;
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -343,38 +311,10 @@
         color: rgb(81, 67, 211);
     }
 
-    .barra_lateral {
-        border: 6px solid rgba(9, 187, 236, 0.6);
-        text-shadow: 1px 2px rgb(96, 120, 128);
-        border-radius: 30px;
-        background-color: rgb(0, 170, 255);
-
-    }
-
-    .barra_lateral p {
-        font-size: 30px;
-        color: rgb(250, 242, 242);
-    }
+  
 
 
-    #servicios {
-        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-        padding: 5px;
-        transition: color 5s, font-size 3s, padding 3s;
-        border-radius: 25px;
-        background-color: #3084b472;
-        font-size: 20px;
-    }
-
-    #servicios:hover {
-        padding: 15px;
-        color: rgb(220, 227, 238)
-    }
-
-    #servicios ul {
-        list-style: none;
-
-    }
+ 
 
     #contactenos {
         display: flex;
@@ -539,32 +479,24 @@
 
     .barra_de_navegacion {
 
-        background-color: rgb(97, 92, 90);
-        border-radius: 20px;
+        
+        
         transition: color 2s, font-size 2s, padding 1s;
-        transition-delay: 1s;
         grid-column-start: 1;
         grid-column-end: 4;
-        padding: 2px;
+        
     }
 
     .barra_de_navegacion ul {
-        background-color: grey;
+        
         list-style: none;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        border-radius: 15px;
+
 
     }
 
-    .barra_de_navegacion li {
-        margin: 40px;
-    }
-
-    .barra_de_navegacion:hover {
-        padding: 10px;
-    }
 
 
     .barra_de_navegacion a {
@@ -581,14 +513,7 @@
     }
 
 
-    .barra_lateral {
-        border: 6px solid rgb(240, 234, 234);
-        text-shadow: 1px 2px rgb(96, 120, 128);
-        border-radius: 30px;
-        background-color: rgba(14, 184, 108, 0.507);
-        padding: 20px;
-        font-size: 30px;
-    }
+  
 
     button {
         padding: 20px;
@@ -601,16 +526,7 @@
 
     ;
 
-    .barra_lateral h1, .barra_lateral p {
-        font-size: 30px;
-        color: rgb(250, 242, 242);
-        margin-left: 30px;
-    }
-
-    .barra_lateral iframe {
-        display: block;
-        margin-left: 50px;
-    }
+   
 
     #contactenos {
         display: flex;

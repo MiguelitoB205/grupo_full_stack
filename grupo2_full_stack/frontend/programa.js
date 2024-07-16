@@ -44,3 +44,20 @@ catch(error){
   }      
 }
 cargarDatos()
+
+async function confirmarPago(){
+    
+    const numeroCuenta = document.getElementById('numeroCuenta')
+
+    try{
+        const confirmacionPago = await axios.post('/pagarAlbum',{
+            numeroCuenta: numeroCuenta
+        })
+        document.getElementById('confirmacionPago').innerHTML=confirmacionPago.data
+    } catch(error){
+        
+    }
+
+
+
+}
