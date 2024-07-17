@@ -1,5 +1,5 @@
 // crear nuevo registro
-async function crearUsuario(){
+/*async function crearUsuario(){
     const nombre = document.getElementById('nombre').value;
     const apellido = document.getElementById('apellido').value;
     const correo = document.getElementById('email').value;
@@ -60,4 +60,5 @@ async function confirmarPago(){
 
 
 
-}
+}*/
+

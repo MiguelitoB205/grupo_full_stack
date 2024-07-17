@@ -29,7 +29,7 @@
     </div>
     <section id="registro">
       <h1>Registro de datos</h1>
-      <form id="formulario">
+      <form id="formulario" method="post" action="registro" name="registroDatos" >
         <label for="nombre">Nombre: </label> <br />
         <input
           type="text"
@@ -121,21 +121,11 @@
         <label for="text">¿Cuáles?</label><br />
         <input type="text" id="artista_libre" />
         <br />
-        <label for="quantity">¿Cuántas canciones escuchas al día?</label><br />
-        <input
-          type="number"
-          id="quantity"
-          name="quantity"
-          min="0"
-          max="50"
-          step="0"
-          value="5"
-        /><br />
         <label for="reserva">Selecciona la fecha de reserva</label><br />
         <input type="date" /><br /><br /><br />
       </form>
       <p id="respuesta"></p>
-      <button id="boton">Enviar datos</button>
+      <input type="">
      
     
     
