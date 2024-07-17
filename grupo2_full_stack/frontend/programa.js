@@ -62,3 +62,15 @@ async function confirmarPago(){
 
 }*/
 
+function validarRegistro(){
+    let nombre = document.forms["registro"]["nombre"].value;
+    let apellido = document.forms["registro"]["apellido"].value;
+    let email = document.forms["registro"]["email"].value;
+    let password = document.forms["registro"]["password"].value;
+    let celular = document.forms["registro"]["celular"].value;
+    if(nombre=="" && apellido=="" && email=="" &&password=="" && celular==""){
+        alert("Falta completar el formulario")
+        return false
+    } 
+}
+

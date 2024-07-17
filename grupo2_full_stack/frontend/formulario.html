@@ -29,11 +29,11 @@
     </div>
     <section id="registro">
       <h1>Registro de datos</h1>
-      <form id="formulario" method="post" action="registro" name="registroDatos" >
+      <form id="formulario" action="/grupo2_full_stack/frontend/registroExitoso.html" method="post"  name="registroDatos" onsubmit="return validarRegitro()">
         <label for="nombre">Nombre: </label> <br />
         <input
           type="text"
-          id="nombre"
+          id="nombre" 
           name="nombre"
           placeholder="Escriba su nombre"
           autofocus
@@ -76,6 +76,8 @@
           required
         />
         <br />
+        <label for="celular">Celular: </label><br>
+        <input type="text" id="celular" name="celular" placeholder="Escriba su celular" autofocus required>
         <br />
         <br />
         <h2>Selecciona cúales son tus artistas ó grupos favoritos</h2>
@@ -123,9 +125,11 @@
         <br />
         <label for="reserva">Selecciona la fecha de reserva</label><br />
         <input type="date" /><br /><br /><br />
+        <input type="submit" value="Registrarse">
       </form>
+
       <p id="respuesta"></p>
-      <input type="">
+      
      
     
     
@@ -165,6 +169,6 @@
       </footer>
     </div>
     <script src="programa.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!--script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></-script!-->
   </body>
 </html>
