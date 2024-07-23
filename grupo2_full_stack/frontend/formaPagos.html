@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="formulario.css" />
-    <link rel="stylesheet" href="estilos.css">
-    <title>Document</title>
+    <title>Formulario</title>
 </head>
 
 <body>
@@ -15,18 +14,58 @@
             <h1>BIENVENIDOS A LA MEJOR TIENDA MUSICAL</h1>
         </header>
     </div>
-    <div class="barra_de_navegacion">
-        <nav>
-            <ul>
-                <li><a href="practica.html">Inicio</a></li>
-                <li><a href="videos.html">Videos Musicales</a></li>
-                <li><a href="#contactenos">Contáctenos</a></li>
-                <li><a href="formulario.html">Registro</a></li>
-            </ul>
-        </nav>
-    </div>
-    <h1>Formas de pago</h1>
-    <form action="confirmacionPago" method="post">
+    
+    <form>
+        <label for="nombre">Nombre: </label> <br />
+        <input
+          type="text"
+          id="nombre" 
+          name="nombre"
+          placeholder="Escriba su nombre"
+          autofocus
+          required
+        /><br />
+        <label for="apellido">Apellido: </label><br />
+        <input
+          type="text"
+          id="apellido"
+          name="apellido"
+          placeholder="Escriba su apellido"
+          autofocus
+          required
+        /><br />
+        <label for="correo">Correo: </label><br />
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Escriba su correo"
+          autofocus
+          required
+        /><br />
+        <label for="password">Contraseña: </label> <br />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Escriba su contraseña"
+          autofocus
+          required
+        /><br />
+        <label for="password">Confirmar contraseña: </label><br />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Escriba su contraseña"
+          autofocus
+          required
+        />
+        <br />
+        <label for="celular">Celular: </label><br>
+        <input type="text" id="celular" name="celular" placeholder="Escriba su celular" autofocus required>
+        <br />
+        <br />
         <input type="radio" id="contra_entrega" name="forma_pago" value="contraEntrega">
         <label for="contra_entrega">Contra entrega</label><br>
         <input type="radio" id="tarjeta_credito" name="forma_pago" value="tarjetaCredito">
@@ -40,10 +79,10 @@
         <input type="radio" id="daviplata" name="forma_pago" value="daviPlata">
         <label for="daviplata">Daviplata</label><br>
         <label for="numeroCuenta" >Ingrese su número de cuenta (Para Nequi y Daviplata es el número móvil)</label>
-        <input type="text" id="numeroCuenta" name="numeroCuenta" required>
-    </form> <br>
-    <button>Confirmar pago</button>
-    <h2 id="confirmacionPago" name="confirmacionPago"></h2>
+        <input type="text" id="numeroCuenta" name="numeroCuenta" required><br>
+        <button id="boton">Confirmar pago</button>
+    </form> <br><br>
+    <h2 id="respuesta" name="respuesta"></h2>
     <script src="programa.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
