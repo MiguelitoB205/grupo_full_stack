@@ -57,17 +57,7 @@ app.get('/confirmacion_pago',(req,res)=>{
 
 // conexión a la base de datos
 
-const connectDB = async () => {
-  try {
-    await mongoose.connect('mongodb://localhost:27017/TiendaMusical')
-    .then(()=> console.log('Conexión a MongoDB establecida'));
-  }
-  catch(err){
-    console.error('Error al conectar a MongoDB: ', err);
-  }
-}
 
-connectDB();
 
 // esquema de BD
 const Schema = mongoose.Schema;
