@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
 const app = express()
-const port = 3300
+const port = 3400
 
 
 app.use(express.static(__dirname + '/frontend'));

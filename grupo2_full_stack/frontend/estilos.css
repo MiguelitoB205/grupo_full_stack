@@ -509,7 +509,7 @@
     }
 
     .barra_de_navegacion a:hover {
-        color: rgb(67, 211, 206);
+        color: rgb(231, 240, 239);
     }
 
 
@@ -629,7 +629,7 @@
     #caja6:hover, #caja7:hover, #caja8:hover, #caja9:hover, #caja10:hover, #caja11:hover,
     #caja12:hover, #caja13:hover, #caja14:hover, #caja15:hover, #caja16:hover{
         background-color: rgb(155, 147, 147);
-        color: rgb(0, 132, 139);
+        color: rgb(226, 234, 235);
         padding: 20px;
         animation-name:colorfuente;
        
