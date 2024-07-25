@@ -14,12 +14,15 @@ const crearUsuario = async(req,res)=>{
     }
     catch (err){
         res.send('Error al crear usuario', err);
+
     }
 };
 
 const obtenerUsuarios = async (req, res) =>{
     try {
         const users = await Usuario.find();
+        res.send(users);
+        console.log();
         
     }
 }
