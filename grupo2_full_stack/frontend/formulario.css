@@ -5,19 +5,94 @@
 }
 body{
     font-size: 30px;
+    background-color: black;
+    color: white;
 }
-#registro {
-    background-color: rgb(108, 88, 208);
-    margin-left:170px;
-    border-radius: 50px;
+h1{
+    color: orange;
+}
+form {
+    background-color: rgb(84, 83, 90);
     padding-left: 20px;
 }
-    button{
-    background-color: rgb(252, 252, 252);
-    padding: 20px;
+    input{
+    background-color: rgb(155, 176, 185);
+    padding:10px;
     border-radius:20px;
     
 }
+button{
+    border-radius: 20px;
+    padding: 23px;
+    left: auto;
+}
+
 #respuesta{
     color: green;
 }
+
+.barra_de_navegacion {
+
+        
+        
+    transition: color 2s, font-size 2s, padding 1s;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    
+}
+
+.barra_de_navegacion ul {
+    
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+
+}
+
+
+
+.barra_de_navegacion a {
+    text-decoration: none;
+    color: rgb(224, 223, 223);
+    font-size: 20px;
+    margin: 10px;
+    text-shadow: 2px 2px rgb(7, 2, 22);
+
+}
+
+.barra_de_navegacion a:hover {
+    color: rgb(231, 240, 239);
+}
+
+.pieDePagina {
+    grid-column: 1/4;
+    border: 3px solid white;
+    border-radius: 15px;
+    background-color: rgb(80, 75, 75);
+    transition-delay: 1s;
+    transition-duration: 2s, 3s, 5s;
+    padding: 15px;
+
+}
+
+.pieDePagina:hover {
+    background-color: rgb(168, 157, 157);
+    color: black;
+    padding: 25px;
+}
+
+#contactenos img {
+    width: 40px;
+    height: 40px;
+
+}
+
+#registrarse{
+    background-color: white;
+}
+#logueo{
+    background-color: green;
+}
+

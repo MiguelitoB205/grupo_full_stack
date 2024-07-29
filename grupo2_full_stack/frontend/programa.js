@@ -1,46 +1,29 @@
 // crear nuevo registro
-async function crearUsuario(){
-    const nombre = document.getElementById('nombre').value;
-    const apellido = document.getElementById('apellido').value;
-    const correo = document.getElementById('email').value;
-    const contrasena = document.getElementById('password').value;
+
+
+async function crearRegistro(){
+    const nomb=document.getElementById('nombre').value;
+    console.log(nomb);
+    const apel = document.getElementById('apellido').value;
+    const correo=document.getElementById('email').value;
+    const contrasena=document.getElementById('password').value;
     try{
-        const respuesta = await axios.post('/crearUsuario',{
-            nombre: nombre,
-            apellido: apellido,
+        const respuesta= await axios.post('/crearUsuario',{
+            nombre:nomb,
+            apellido:apel,
             email:correo,
-            password:contrasena
-            })
-            document.getElementById('respuesta').innerHTML=respuesta.data;
-            console.log(respuesta.data);
-            if(respuesta.data){
-                document.getElementById('boton').style.display="none";
-                document.getElementById('respuesta').innerHTML="Gracias por registrarte";
-            }
-    } catch(error){
+            password:contrasena })
+        document.getElementById('respuesta').innerHTML=respuesta.data;
+        if(respuesta.data){
+            window.location.href = '/usuarioCreado';
+        }
+        console.log(respuesta.data);
+    }
+    catch(error){
         console.log(error);
     }
 }
-document.getElementById('boton').addEventListener('click', crearUsuario)
 
-// listar usuarios
+document.getElementById('boton').addEventListener('click',crearRegistro);
 
-async function cargarDatos() {
-    try{
-        const respuesta= await axios.get('/usuarios')        
-    if (respuesta.data) {           
-      const userList = document.getElementById('listaUsuarios');
-      userList.innerHTML = ''; 
-        respuesta.data.forEach(user => {
-        const option = document.createElement('option');
-        option.value = user.id;
-        option.textContent = `${user.nombre}& ${user.apellido} & ${user.correo}`;
-        userList.appendChild(option);
-      });
-    }
-}
-catch(error){
-    console.log(error); 
-  }      
-}
-cargarDatos()
+
