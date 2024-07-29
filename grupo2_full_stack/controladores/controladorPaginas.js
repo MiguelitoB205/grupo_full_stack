@@ -6,26 +6,26 @@ const path = require('path')
  };
  
  // Servir pagina de contacto
- const pagContacto = (req, res)=>  {
+ const pagFormaPago = (req, res)=>  {
 res.sendFile(__dirname + '/frontend/formaPagos.html')
  };
  //Servivios
- const paginaRegistro = (req, res)=> {
+ const pagRegistro = (req, res)=> {
     res.sendFile(__dirname + '/frontend/registro.html')
  };
  // Pagina de logueo
- const paginaLogueo = (req, res)=> {
-    res.sendFile(__dirname +  '/frontend/logue.html')
+ const pagLogueo = (req, res)=> {
+    res.sendFile(__dirname +  '/frontend/logueo.html')
  };
  // video
- const paginaVideo = (req, res)=>  {
+ const pagVideos = (req, res)=>  {
     res.sendFile(__dirname +  '/frontend/video.html')
  };
- const paginaRegistroExitoso = (req, res)=> {
+ const pagRegistroExitoso = (req, res)=> {
     res.sendFile(__dirname +  '/frontend/registroExitoso.html')
  };
  // Confirmar
- const paginaConfirmarPago = (req, res)=>  {
+ const pagConfirmarPago = (req, res)=>  {
     res.sendFile(__dirname +  '/frontend/ConfirmacionPago.html')
  };
  
