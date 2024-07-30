@@ -18,11 +18,38 @@
     <input type="password" name="contraseña" id="contraseña" placeholder="Escriba su contraseña"></br>
     <label for="celular">Celular</label>
     <input type="celular" name="celular" id="celular" placeholder="Escribe tu numero"><br>
-    <button id="boton">Registrarse</button><br>
     <
     
     
 </form>
+<button id="boton">Registrarse</button><br>
+
+<h1>Lista de usuarios</h1>
+<select id="listaUsuarios"></select>
+<p id="respuesta"></p>
+<button id="boton2">Obtener usuarios</button>
+
+<h1>Búsqueda por nombre</h1>
+<input type="text" id="busqueda" placeholder="Ingresa nombre de usuario a buscar" required>
+<p id="respuesta2"></p>
+<button id="boton3">Buscar</button>
+
+<h1>Actualización por nombre</h1>
+<select id="listaUsuarios2"></select>
+<input type="text" id="nuevonombre" name="nuevonombre" required>
+<input type="text" id="nuevoapellido" name="nuevoapellido" required>
+<input type="text" id="nuevocorreo" name="nuevocorreo" required>
+<input type="text" id="nuevacontrasena" name="nuevacontrasena" required>
+<input type="text" id="nuevocelular" name="nuevocelular" required>
+<p id="respuesta3"></p> 
+<button id="boton4">Actualizar registro</button>
+
+<h1>Eliminar por nombre</h1>
+<select id="listaUsuarios3"></select>
+<p id="respuesta4"></p>
+<button id="boton5">Eliminar registro</button>
+<script type="module" src="programa.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 
 </html>

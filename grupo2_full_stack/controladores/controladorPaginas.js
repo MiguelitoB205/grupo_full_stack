@@ -28,4 +28,12 @@ res.sendFile(__dirname + '/frontend/formaPagos.html')
  const pagConfirmarPago = (req, res)=>  {
     res.sendFile(__dirname +  '/frontend/ConfirmacionPago.html')
  };
- 
+  module.exports = {
+   pagHome,
+   pagFormaPago,
+   pagRegistro,
+   pagLogueo,
+   pagVideos,
+   pagRegistroExitoso,
+   pagConfirmarPago
+  }

@@ -48,3 +48,54 @@ const obtenerUsuarioNombre = async (req,res)=>{
         res.send('Error al obtener usuario, intentalo de nuevo', err);
     }
 }
+
+const actualizarUsuarioNombre = async(req,res)=>{
+    const nomb = req.body.nombre;
+    const nuevonombre = req.body.nuevonombre;
+    const nuevoapellido = req.body.nuevoapellido;
+    const nuevocorreo = req.body.nuevocorreo;
+    const nuevacontrasena = req.body.nuevacontrasena;
+    const nuevocelular = req.body.nuevacelular;
+    try{
+        const userUpdate =await Usuario.findOneAndUpdate({nombre: nomb},{
+            nombre:nuevonombre, apellido:nuevoapellido,correo:nuevocorreo,
+            contrasena: nuevacontrasena,celular:nuevocelular
+        },{new: true, runValidators: true});
+        if(!userUpdate){
+            res.send('El usuario no está actualizado');
+        } else{
+            res.send('El usuario está actualizado');
+            console.log('El usuario está actualizado');
+        }
+} 
+catch(err){
+    res.send('Error al actualizar usuario', err)
+    }  
+}
+
+const eliminarUsuarioNombre = async (req, res)=>{
+    const nombre = req.body.nombre;
+    try{
+        const user = await Usuario.findOneAndDelete({nombre:nombre});
+        if(!user){
+            res.send('Usuario no encontrado');
+        } else {
+            res.send('Usuario eliminado');
+            console.log('Usuario eliminado');
+        }
+    } catch(err){
+        res.send('Error al eliminar usuario', err);
+    }
+}
+
+
+
+module.exports = {
+    crearUsuario,
+    obtenerUsuarios,
+    obtenerUsuarioNombre,
+    actualizarUsuarioNombre,
+    eliminarUsuarioNombre
+
+
+}
