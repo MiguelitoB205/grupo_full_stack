@@ -21,9 +21,7 @@ res.sendFile(__dirname, '../frontend/formaPagos.html')
  const pagVideos = (req, res)=>  {
     res.sendFile(__dirname,  '../frontend/video.html')
  };
- const pagRegistroExitoso = (req, res)=> {
-    res.sendFile(path.resolve(__dirname,  '../frontend/registroExitoso.html'))
- };
+
  // Confirmar
  const pagUsuarioCreado = (req, res)=>  {
     res.sendFile(path.resolve(__dirname, '../frontend/usuarioCreado.html'))
@@ -34,6 +32,5 @@ res.sendFile(__dirname, '../frontend/formaPagos.html')
    pagRegistro,
    pagLogueo,
    pagVideos,
-   pagRegistroExitoso,
    pagUsuarioCreado
   }

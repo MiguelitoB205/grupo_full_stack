@@ -588,6 +588,7 @@
 
     h1 {
         margin: 10px;
+        padding-bottom: 53px;
     }
     main h1{
         margin-left:100px;
@@ -661,5 +662,6 @@
     #exito{
         color: green;
     }
+   
 
 }
