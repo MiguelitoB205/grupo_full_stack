@@ -91,8 +91,13 @@ button{
 
 #registrarse{
     background-color: white;
+    color:black
 }
-#logueo{
+#boton{
     background-color: green;
+}
+
+#negativo{
+    background-color: red;
 }
 

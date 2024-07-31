@@ -6,6 +6,7 @@ const validacionFormulario = (req, res, next)=> {
     const correo = req.body.correo;
     const contraseña = req.body.contraseña;
     const  celular = req. body.celular;
+    const numeroCuenta = req.body.numeroCuenta;
     if(!nombre)  {
         res.send('falto el nombre');
     }else if(apellido) {
@@ -17,12 +18,14 @@ const validacionFormulario = (req, res, next)=> {
     }else if(celular) {        
          res.send('falto celular');   
     
-    } else{
+    }  else if(numeroCuenta){
+        res.send('faltó el número de cuenta')
+    }
+    else{
         next()
     }
 
 }
-module.exports = validacionFormulario;
 
 
 

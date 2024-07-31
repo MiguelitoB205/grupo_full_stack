@@ -22,32 +22,40 @@ async function llamadaPagina() {
 //*************************************** */
 // crear registro nuevo
 async function crearRegistro() {
-    if (!validarNombre() || !validarApellido() || !validarEmail() || !validarPassword() || validarCelular()){
+    if (!validarNombre() || !validarApellido() || !validarEmail() || !validarPassword() || !validarCelular() ||!validarNumeroCuenta() ){
         alert("campos invalidos");
     }else  {
         const nomb = document.getElementById('nombre').value
         console.log(nomb);
-        const apellido = document.getElementById
-    }
-    try {
-        const respuesta = await axios.post('bd/usuarios',  {
-            nombre: nomb,
-            email: correo,
-            password: contrasena
-        })
-        document.getElementById('respuesta').innerHTML = respuesta.data;
-        if (respuesta.data) {
-        window.location.href = '/usuariocreado'; 
-    }
-    console.log(respuesta.data);
+        const apellido = document.getElementById('apellido').value
+        const correo = document.getElementById('correo').value
+        const contrasena = document.getElementById('contraseña').value
+        const celular = document.getElementById('celular').value;
+        const numeroCuenta = document.getElementById('numeroCuenta').value;
+        try {
+            const respuesta = await axios.post('bd/usuarios',  {
+                nombre: nomb,
+                apellido : apellido,
+                correo: correo,
+                contrasena: contrasena,
+                celular: celular,
+                numeroCuenta: numeroCuenta
+            })
+            document.getElementById('respuesta').innerHTML = respuesta.data;
+            if (respuesta.data) {
+            window.location.href = '/usuarioCreado'; 
+            }
+       
+            console.log(respuesta.data);
     }
     catch (error) {
         console.log(error);
     }
-}
+ }
+    }
+document.getElementById('boton').addEventListener('click', crearRegistro);
 
 
-document.getElementById('boton').addEventListener('clik', crearRegistro);
 
 //************************************************************ */
 // obtener todos los usuarios
@@ -56,12 +64,12 @@ async function cargarDatos()  {
     try {
         const respuesta = await axios.get('bd/usuarios')
         if (respuesta.data){
-            const userList = document.getElementById('listausuarios');
+            const userList = document.getElementById('listaUsuarios');
             userList.innerHTML = '';
             respuesta.data.forEach(user => {
                 const option = document.createElement('option');
-                option.value = '${user.nombre}';
-                option.textContent ='${user.nombre}';
+                option.value = `${user.nombre}`;
+                option.textContent =`${user.nombre}`;
                 userList.appendChild(option);
  });
         }
@@ -77,13 +85,13 @@ cargarDatos();
 //************************************************ */
 // obtener un usuario por nombre
 async   function buscarUsuario() {
-    const nomb = document.getElementById('ListaUsuarios').Value;
+    const nomb = document.getElementById('listaUsuarios').value;
     console.log(nomb);
     try {
         const respuesta = await axios.post('bd/usuarios/nombre', {
            nombre: nomb 
         })
-    document.getElementById('respuesta').innerHTML = '${respuesta.data.nombre} ${respuesta.data.correo} ${respuesta.data.contrasena}';
+    document.getElementById('respuesta').innerHTML = `${respuesta.data.nombre} ${respuesta.data.apellido} ${respuesta.data.correo} ${respuesta.data.contrasena} ${respuesta.data.celular} ${respuesta.data.numeroCuenta}`;
     console.log(respuesta.data);
     }
     catch (error) {
@@ -95,20 +103,20 @@ async   function buscarUsuario() {
 // obtener un usuario por nombre desde campo
 async function buscarUsuario2() {
     const nomb = document.getElementById('busqueda').value;
-    console.log(nom);
+    console.log(nomb);
     try {
         const respuesta = await axios.post('bd/usuarios/nombre', {
             nombre: nomb
         })
-    document.getElementById('respuesta2').innerHTML = `${respuesta.data.nombre} ${respuesta.data.correo}
-     ${respuesta.data.contraseña}`;
+    document.getElementById('respuesta2').innerHTML = `${respuesta.data.nombre} ${respuesta.data.apellido} ${respuesta.data.correo}
+     ${respuesta.data.contrasena} ${respuesta.data.celular} ${respuesta.data.numeroCuenta}`;
      console.log(respuesta.data);
     }
 catch(error) {
     console.log(error);
 }
 }
-document.getElementById('boton3').addEventListener('click', buscarusuario2);
+document.getElementById('boton3').addEventListener('click', buscarUsuario2);
 
 //***************************************************************** */
 // actualizar datos por nombre
@@ -117,7 +125,7 @@ async function cargarDatos2() {
         const respuesta = await axios.get( 'bd/usuarios')
         if(respuesta.data) {
             const userList = document.getElementById('listaUsuarios2');
-            userList = innerHTML= '';
+            userList.innerHTML= '';
             respuesta.data.forEach(user => {
                 const option = document.createElement('option');
                 option.value = `${user.nombre}`;
@@ -139,9 +147,12 @@ async function llenarDatos() {
     const respuesta= await axios.post('bd/usuarios/nombre' , {
         nombre: nomb
     })
-    document.getElementById('nuevoNombre').value =`${respuesta.data.nombre}`;
+    document.getElementById('nuevonombre').value =`${respuesta.data.nombre}`;
+    document.getElementById('nuevoapellido').value = `${respuesta.data.apellido}`
     document.getElementById('nuevocorreo').value =`${respuesta.data.correo}`;
-    document.getElementById('nuevacontrasena').value = `${respuesta.data.contrasena}`;   
+    document.getElementById('nuevacontrasena').value = `${respuesta.data.contrasena}`;  
+    document.getElementById('nuevocelular').value =  `${respuesta.data.celular}`
+    document.getElementById('nuevonumeroCuenta').value = `${respuesta.data.numeroCuenta}`
     console.log(respuesta.data);
 }
 catch (error) {
@@ -152,20 +163,27 @@ catch (error) {
 
 async function actualizarRegistro() {
     const nomb = document.getElementById('listaUsuarios2').value;
-    const nombnuevo = document.getElementById('nuevoNombre').value;
+    const nombnuevo = document.getElementById('nuevonombre').value;
+    const apel = document.getElementById('nuevoapellido').value;
     const corr = document.getElementById('nuevocorreo').value;
-    const contra = document.getElementById('nuevaConraseña').value;
+    const contra = document.getElementById('nuevacontraseña').value;
+    const cel = document.getElementById('nuevocelular').value;
+    const numCuenta = document.getElementById('nuevonumeroCuenta').value;
 try {
 const respuesta = await axios.put('bd/usuarios/nombre', {
     nombre: nomb,
 nuevonombre: nombnuevo,
+nuevoapellido: apel,
 nuevocorreo: corr,
-nuevopassword: contra
+nuevacontrasena: contra,
+nuevocelular: cel,
+nuevonumeroCuenta: numCuenta
 });
    document.getElementById('respuesta3').innerHTML = respuesta.data;
 }
    catch (error) {
      console.log(error);
+}
 }
 document.getElementById('listaUsuarios2').addEventListener( 'change', llenarDatos);
 document.getElementById('boton4').addEventListener('click',actualizarRegistro);
@@ -176,7 +194,7 @@ async function cargarDatos3() {
     try  {
 const respuesta = await axios.get('bd/usuarios')
 if (respuesta.data) {
-    const userList = documet.getElementById('ListaUsuarios3');
+    const userList = document.getElementById('listaUsuarios3');
 userList.innerHTML =  '';
 respuesta.data. forEach(user => {
     const option = document.createElement('option');
@@ -190,10 +208,10 @@ catch (error) {
     console.log(error);
 }
 }
-cargarDatos3();getElementById('listausuarios3').value;
+cargarDatos3()
 
 async function eliminarUsuario() {
-    const nomb = document.getElementById('listausuarios3').value;
+    const nomb = document.getElementById('listaUsuarios3').value;
     console.log(nomb);
     try {
 const respuesta = await axios.delete('bd/usuarios/nombre', {
@@ -217,7 +235,7 @@ document.getElementById('boton5').addEventListener('clik',eliminarUsuario);
 
 function validarNombre() {
     const nombre = document.getElementById('nombre').value;
-    const expresion = /^[A-Za-z]{3,}\s[A-Za-z]{3,}s/
+    const expresion = /^[A-Za-z]{3,}\s[A-Za-z]{3,}$/
     if (expresion.test(nombre)) {
         document.getElementById('advertencia').innerHTML = 'Nombre correcto';
         return true;
@@ -228,47 +246,77 @@ function validarNombre() {
     
    } 
 }
-
-}
-
 document.getElementById('nombre').addEventListener('blur', validarNombre);
+
+function validarApellido(){
+    const apellido = document.getElementById('apellido').value;
+    const expresion =/^[A-Za-z]{3,}\s[A-Za-z]{3,}$/
+    if(expresion.test(apellido)){
+        document.getElementById('advertencia2').innerHTML = "Apellido correcto"
+        return true;
+    } else{
+        document.getElementById('advertencia2').innerHTML = "Apellido incorrecto";
+        return false
+    }
+}
+document.getElementById('apellido').addEventListener('blur',validarApellido )
 
 //*************************************** */
 // validacion campo email
 function validarEmail() {
-    const email = document.getElementById('email').value;
+    const email = document.getElementById('correo').value;
 const expresion =  /^\w+@\w+\.\w+$/
 if(expresion.test(email)) {
-    document.getElementById('advertencia2').innerHTML =  'Email incorrecto';
+    document.getElementById('advertencia3').innerHTML =  'Email correcto';
     return true;
 }
  else { 
-    document.getElementById('advertencia2').innerHTML = 'Email incorrecto';
+    document.getElementById('advertencia3').innerHTML = 'Email incorrecto';
     return false 
  }
 }
-document.getElementById('email').addEventListener( 'keyup', validaremail);
+document.getElementById('correo').addEventListener( 'keyup', validarEmail);
 
 //************************** */
 // validacion campo password
 function validarPassword() {
-    const password = document.getElementById('password').value;
-    const expresion = /^(\?=.*[a-z])(\?=.*[A-Z])(\?=.*\d)[a-zA-Z\d]{8,}$/
+    const password = document.getElementById('contraseña').value;
+    const expresion = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
+    if (expresion.test(password)) {
+        document.getElementById('advertencia4').innerHTML = 'Contraseña correcta';
+        return true;
+    } else {
+        document.getElementById('advertencia4').innerHTML = 'Contraseña incorrecta';
+        return false;
+    }
 }
+document.getElementById('contraseña').addEventListener('keyup',validarPassword);
 
-if (expresion.test(email) {
-    document.getElementById('advertencia2').innerHTML =  'Email correcto';
-    return true;
-})
-    
+function validarCelular(){
+    const celular = document.getElementById('celular').value;
+    const expresion = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
+    if(expresion.test(celular)){
+        document.getElementById('advertencia5').innerHTML = "Celular correcto"
+        return true;
+    } else{
+        document.getElementById('advertencia5').innerHTML = "Celular incorrecto"
+        return false;
+    }
 
-else {
-    document.getElementById('advertencia3').innerHTML =  'Password incorrecto';
-    return false;
 }
+document.getElementById('celular').addEventListener('keyup', validarCelular)
 
-document.getElementById('password').addEventListener('keyup'.validarPassword);
-
-
+function validarNumeroCuenta(){
+    const numeroCuenta = document.getElementById('numeroCuenta').value;
+    const expresion = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
+    if(expresion.test(numeroCuenta)){
+        document.getElementById('advertencia6').innerHTML = "Número de cuenta correcto"
+        return true;
+    } else{
+        document.getElementById('advertencia6').innerHTML = "Número de cuenta incorrecto"
+        return false
+    }
+}
+document.getElementById('numeroCuenta').addEventListener('keyup', validarNumeroCuenta)
 
 

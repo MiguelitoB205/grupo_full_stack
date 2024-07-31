@@ -7,8 +7,9 @@ const crearUsuario = async(req,res)=>{
     const correo = req.body.correo;
     const contrasena = req.body.contrasena;
     const celular = req.body.celular;
+    const numeroCuenta = req.body.numeroCuenta
     const user = new Usuario({ nombre: nombre, apellido:apellido, correo:correo, contrasena:contrasena,
-        celular:celular
+        celular:celular, numeroCuenta: numeroCuenta
     })
     try {
         await user.save()
@@ -56,10 +57,11 @@ const actualizarUsuarioNombre = async(req,res)=>{
     const nuevocorreo = req.body.nuevocorreo;
     const nuevacontrasena = req.body.nuevacontrasena;
     const nuevocelular = req.body.nuevacelular;
+    const nuevonumeroCuenta = req.body.nuevonumeroCuenta
     try{
         const userUpdate =await Usuario.findOneAndUpdate({nombre: nomb},{
             nombre:nuevonombre, apellido:nuevoapellido,correo:nuevocorreo,
-            contrasena: nuevacontrasena,celular:nuevocelular
+            contrasena: nuevacontrasena,celular:nuevocelular, numeroCuenta:nuevonumeroCuenta
         },{new: true, runValidators: true});
         if(!userUpdate){
             res.send('El usuario no está actualizado');

@@ -6,7 +6,8 @@ nombre: String,
 apellido:String,
 correo: String,
 contraseña: String,
-celular:String
+celular:String,
+numeroCuenta:String
 });
 
 

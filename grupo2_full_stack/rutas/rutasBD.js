@@ -1,18 +1,20 @@
 const express = require('express')
 const rutas = express.Router ();
-const TiendaMusical =require('../controladores/controladorBD.JS')
+const BaseDeDatos =require('../controladores/controladorBD.js')
 const validacion=require('../intermediarias/validaciones')
 
 
 
 
-rutas.get ('/usuarios', TiendaMusical.obtenerUsuarios);
-rutas. post ('/usuario', validacion,TiendaMusical.crearUsuario);
-rutas.post ('/usuarios/nombre',TiendaMusical.crearUsuario); 
-rutas.put ('/usuarios/nombre', TiendaMusical.actualizarUsuarioNombre);
-rutas.delete ('/usuarios/nombre', TiendaMusical.eliminaUsuario);
+rutas.get ('/usuarios', BaseDeDatos.obtenerUsuarios);
+rutas. post ('/usuario', validacion,BaseDeDatos.crearUsuario);
+rutas.post ('/usuarios/nombre',BaseDeDatos.crearUsuario); 
+rutas.put ('/usuarios/nombre', BaseDeDatos.actualizarUsuarioNombre);
+rutas.delete ('/usuarios/nombre', BaseDeDatos.eliminarUsuarioNombre);
 
 module.exports = rutas;
+
+
 
 
 

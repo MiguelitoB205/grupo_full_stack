@@ -8,9 +8,7 @@ rutas.get('/',(req,res)=>{
 
 rutas.get('/home',paginas.pagHome);
 rutas.get('/registro',paginas.pagRegistro);
-rutas.get('/logueo', paginas.pagLogueo);
 rutas.get('/videos',paginas.pagVideos);
-rutas.get('/registroExitoso',paginas.pagRegistroExitoso)
-rutas.get('/confirmacionPago',paginas.pagConfirmarPago)
+rutas.get('/usuarioCreado',paginas.pagUsuarioCreado)
 
 module.exports = rutas;
