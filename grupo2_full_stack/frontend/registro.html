@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Formulario</h1>
-<form>
+<form action="./usuarioCreado.html">
     <label for="name">Nombre</label><br>
     <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre"><br>
     <p id="advertencia"></p>
@@ -25,13 +25,13 @@
     <input type="celular" name="celular" id="celular" placeholder="Escribe tu numero"><br>
     <p id="advertencia5"></p><br>
     <h2>Por cual medio desea realizar su transacción?</h2>
-    <input type="radio" name="pago" id="">
+    <input type="radio" name="pago" id="nequi">
     <label for="">Nequi</label><br>
-    <input type="radio" name="pago" id="">
+    <input type="radio" name="pago" id="daviplata">
     <label for="Daviplata">Daviplata</label><br>
     <input type="radio" name="pago" id="credito">
     <label for="credito">Crédito</label><br>
-    <input type="radio" >
+    <input type="radio" name="pago" id="debito" >
     <label for="">Débito</label><br>
     <input type="radio" name="pago" id="efectivo">
     <label for="">Efectivo</label><br>
@@ -39,11 +39,11 @@
     <input type="text" id="numeroCuenta" name="numeroCuenta">
     <p id="advertencia6"></p>
 
+    <button id="boton">Registrarse</button><br>
 
     
     
 </form><br><br>
-<button id="boton">Registrarse</button><br>
 
 <h1>Lista de usuarios</h1>
 <select id="listaUsuarios"></select>
